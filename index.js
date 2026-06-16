@@ -43,9 +43,9 @@ app.use(bodyParser.json())
 
 // app.use(cookieParser())
 
-app.listen(port, ()=>{
-    console.log(`App running on port ${port}`)
-})
+// app.listen(port, ()=>{
+//     console.log(`App running on port ${port}`)
+// })
 
 mongoose.connect(`${process.env.MONGO_URL}/dazzle`)
   .then(() => console.log(`Connected to Dazzle!`))
@@ -91,3 +91,6 @@ export const instance = new Razorpay({
   key_id: process.env.KEY_ID,
   key_secret: process.env.KEY_SECRET,
 });
+
+
+export default app;
